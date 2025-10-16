@@ -1,0 +1,21 @@
+body{
+    background-color: pink;
+}
+h1{
+    background-color: black;
+    color: green;
+}
+h2{
+    font-style: italic;
+    color: blue;
+}
+p{
+    background-color: orange;
+}
+#distinto{
+    text-decoration: line-through;
+}
+footer{
+    background-color: orangered;
+    color: blue;
+}

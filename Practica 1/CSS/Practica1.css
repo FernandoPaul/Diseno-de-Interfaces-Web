@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px dashed rgba(0, 0, 0, 0.2);
+    /*Activa el contorno para revisar el espacio real*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: white;
+}
+
+/* ----- REJILLAS PRINCIPALES: 12 COLUMNAS ----- */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /*Crea 12 Columnas de igual tamaño.*/
+    gap: 10px;
+    /*Espacio entre columnas y filas.*/
+    min-height: 100vh;
+    /*100% de la altura de a ventana grafica*/
+    padding-top: 80px;
+}
+
+/* ----- ENCABEZADO FIJO ----- */
+header {
+    /*grid-column: 1/13;  /*Ocupa las 12 columnas.*/
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    /*Espacio interno*/
+    margin-bottom: 10px;
+    /*Separacion respecto al contenido*/
+    text-align: center;
+    border-bottom: 3px solid #ffcc00;
+    /*Borde decorativo*/
+    position: fixed;
+    /*Se fija respecto a la ventana del navegador (no se mueve con el scroll)*/
+    width: 100%;
+    /*Ocupa todo el ancho de la pantalla*/
+    height: 70px;
+    /*Altura total del header*/
+    z-index: 1000;
+    /*Asegura que se superpone a todo*/
+}
+
+/* ----- MENÚ LATERAL ----- */
+.sidebar {
+    grid-column: 1/3;
+    /*Ocupa 2 de las 12 columnas.*/
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-right: 2px solid #ddd;
+}
+
+/* ----- GALERÍA DE PRODUCTOS ----- */
+.productos {
+    grid-column: 3/11;
+    /*Ocupa 8 columnas centrales de las 12 columnas.*/
+    background-color: #f4f4f5;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    /*Permite que los productos bajen a la siguiente fila.*/
+    gap: 15px;
+    /*Espacio entre productos.*/
+    justify-content: center;
+
+}
+
+/* ----- PRODUCTOS ----- */
+.producto {
+    flex: 1 1 calc(25% - 15px);
+    /*Ocupa 25 % del ancho menos el gap porque sino excedemos el 100% del ancho, 
+    esto hace que entren 4 productos como maximo en pantallas grandes.*/
+    background-color: #f4f4f5;
+    border: 1px solid #ddd;
+    /*define el grosor, estilo y color.*/
+    padding: 20px;
+    margin: 0px;
+    /*Evitamos que los marguenes rompan filas*/
+    text-align: center;
+    border-radius: 8px;
+    /*Crea esquinas redondeadas.*/
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    /* Añade sombra a la caja */
+}
+
+.producto:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    /* Añadir sombra a la caja */
+    transform: translateY(-3px);
+    /* Movimiento hacia arriba (-) del producto para crear dinamismo*/
+}
+
+.img_prod {
+    float: left;
+    /* La imagen flota a la izquierda */
+    width: 180px;
+    /* tamaño de la IMG del producto */
+    height: auto;
+    /* Altura automatica para mantener la proporcion */
+    object-fit: contain;
+    /* Asegura que no se deforme la imagen */
+    margin-right: 10px;
+    /* Separación con el texto */
+}
+
+.info_prod {
+    overflow: visible;
+    width: auto;
+    color: #555;
+    text-align: left;
+    margin: auto;
+}
+
+/* ----- CARRITO DE COMPRA FIJO ----- */
+.carrito {
+    grid-column: 11/13;
+    /* Ocupa 2 columnas del lado derecho. */
+    position: sticky;
+    /* Se mantiene fijo mientras se hace scroll en su contenedor */
+    top: 80px;
+    /* Espacio que hay que dejar para el encabezado */
+    height: fit-content;
+    /* Que su altura sea fija al contenido de dentro */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 2px solid #ddd;
+}
+
+/* ----- PIE DE PÁGINA ----- */
+footer {
+    grid-column: 1/13;
+    /*Ocupa las 12 columnas.*/
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+/* ----- RESPONSIVIDAD PARA PANTALLAS DE MONITORES, TABLETS y MOVILES ----- */
+@media (max-width:1024px) {
+    .producto {
+        flex: 1 1 calc(33.33% - 15px);
+        /* 3 productos como maximo en pantalla */
+    }
+
+    .img_prod {
+        width: 100%;
+        /* Tamaño fijo */
+        height: auto;
+        object-fit: contain;
+        margin-right: 10px;
+        display: block;
+    }
+
+    .info_prod {
+        overflow: visible;
+        color: #555;
+        text-align: left;
+    }
+
+}
+
+@media (max-width:760px) {
+    .producto {
+        flex: 1 1 calc(50% - 15px);
+        /*2 productos como maximo en pantalla*/
+    }
+
+    .img_prod {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        height: auto;
+        object-fit: contain;
+        margin-right: 10px;
+        display: block;
+    }
+
+    .info_prod {
+        overflow: visible;
+        color: #555;
+        text-align: left;
+    }
+}
+
+@media (max-width:480px) {
+    .producto {
+        flex: 1 1 100%;
+        /*1 producto por fila*/
+    }
+
+    .img_prod {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        height: auto;
+        object-fit: contain;
+        margin-right: 10px;
+        display: block;
+    }
+
+    .info_prod {
+        overflow: visible;
+        color: #555;
+        text-align: left;
+    }
+}
+
+/*
+<div class="producto">Producto 6</div>
+            <div class="producto">Producto 7</div>
+            <div class="producto">Producto 8</div>
+            <div class="producto">Producto 9</div>
+            <div class="producto">Producto 10</div>
+            <div class="producto">Producto 11</div>
+            <div class="producto">Producto 12</div>
+*/

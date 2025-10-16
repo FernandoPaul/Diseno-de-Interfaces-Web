@@ -1,0 +1,40 @@
+body{
+    background-color: pink;
+}
+h1{
+    text-align: center;
+}
+div, .fondo{
+    background-color: lightgreen;
+    color: black;
+}
+h2{
+    text-decoration: underline;
+}
+p{
+    font-style: italic;
+}
+#formacion{
+    text-align: center;
+}
+#experiencia{
+    color: red;
+    background-color: lightgreen;
+}
+span{
+    font-weight: bold;
+    font-style: normal;
+}
+.centrado{
+    text-align: center;
+}
+.verde{
+    color: green;
+}
+#tachado{
+    text-decoration: line-through;
+}
+footer{
+    background-color: rgb(255, 179, 0);
+    color: blue;
+}
