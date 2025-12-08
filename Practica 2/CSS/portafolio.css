@@ -1,0 +1,41 @@
+/* ----- RESETEO DE ESTILOS PREDETERMINADOS ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px dashed rgba(0, 0, 0, 0.2);
+    /* Activa el contorno para revisar el espacio real*/
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    background-color: #261A14;
+    color: #EDEAE1;
+}
+/* ---- HEADER GLOBAL ---- */
+header{
+    position: fixed;    /* Simpre visible, aunque se haga scroll */
+    width: 100%;        /* Ocupa todo el ancho de la pantalla */
+    background-color: #4D3D35;
+    color: #009ACD;
+    display: flex;      /* Activa flexbox para alinear los elementos */
+    z-index: 1000;      /* Mantien el header por encima de todo */
+}
+/* ---- Avatar + Nombre ---- */
+.areaAvatar{
+    display: flex;      /* Coloca el avatar y el nombre en fila */
+    align-items: center;/* Alinea verticalmente en el centro */
+    gap: 10px;          /* Distacia entre el avatar y el nombre*/
+}
+.avatar{
+width: 50px;            /* Tamaño del avatar (ancho) */
+height: 50px;           /* Tamaño del avatar (alto) */
+border-radius: 50%;            /* Redondear los bordes para conseguir una foto en forma de circulo */
+object-fit: cover;      /* Ajusta la imagen sin deformarla */
+}
+
+/* ---- Menu ---- */
+nav{
+    text-align: right;
+    color: #009ACD;
+    text-decoration: none;
+}
