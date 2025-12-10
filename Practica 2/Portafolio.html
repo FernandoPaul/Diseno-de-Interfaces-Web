@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/portafolio.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/portafolio.css" />
     <title>Portafolio Personal</title>
 </head>
+
 <body>
     <header>
-        <div class="areaAvatar">
-            <img src="IMG/fotoperfil.png" alt="Foto perfil" class="avatar">
-            <h2 >Portafolio personal</h2>
+        <div class="areaLogo">
+            <img src="IMG/fotoperfil.png" alt="Foto perfil" class="logo" />
+            <a href="#inicio"><h2 class="">Paul Quillupangui</h2></a>
         </div>
         <nav class="menu">
-            <a href="#proyectos">Proyectos</a>
+            <a href="#enlaceProyectos">Proyectos</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
-    <section>
-        <h3>Hola Soy Paul,</h3>
-        <h2>Y soy desarollador web</h2>
-        <h4>estos son unos ejemplos de lo que soy capaz</h4>
-        <h2>Proyectos realizados</h2>
+    <section id="inicio">
+        <div class="presentacion">
+            <h3>Hola Soy Paul,</h3>
+            <h1>soy Desarollador web</h1>
+            <h4>y estos son unos ejemplos de lo que soy capaz.</h4>
+        </div>
+        <h2 id="enlaceProyectos" class="tituloMenu">Proyectos</h2>
         <div class="proyectos" id="proyecto1">
-            <h3>Tienda Online</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque hic reprehenderit mollitia fugit dolore eaque repellat impedit explicabo alias officiis odit perferendis fuga, deserunt non beatae pariatur accusamus voluptates corporis!</p>
-            <h4>Tecnologias Utilizadas</h4>
-            <p></p>
+            <h3 class="tituloProyecto">Tienda Online</h3>
+            <p class="descripcion">
+                Este proyecto consiste en el diseño y maquetación de la página
+                principal de una tienda de ropa online. El objetivo fue aprender a
+                organizar correctamente una interfaz utilizando una rejilla de 12
+                columnas, aplicar técnicas de maquetación modernas y practicar con
+                diseños responsivos. También se trabajó la estructura visual, la
+                organización de productos, la accesibilidad y la optimización básica
+                para mejorar la experiencia del usuario.
+            </p>
+            <h4 class="tituloTags">Tecnologias Utilizadas</h4>
+            <div class="listaTags">
+                <span class="tag html">HTML5</span>
+                <span class="tag css">CSS3</span>
+            </div>
         </div>
         <div class="proyectos" id="proyecto2">
-            <h3>Formulario de Inicio de sesion</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolorum alias explicabo omnis. Mollitia, nihil! Voluptatibus suscipit sint, dolor sit impedit officia animi ratione accusantium, vel nobis pariatur aspernatur ipsam.</p>
-            <h4>Tecnologias Utilizadas</h4>
-            <p></p>
+            <h3 class="tituloProyecto">Formulario de Inicio de sesion</h3>
+            <p class="descripcion">
+                Este proyecto se centra en el diseño de un formulario de acceso
+                moderno y funcional. Su objetivo fue aprender a crear formularios
+                accesibles, con estilos coherentes y una estructura clara. Se practicó
+                la validación básica, el diseño responsivo y la experiencia de usuario
+                (UX), cuidando la alineación, espaciado y usabilidad en distintos
+                dispositivos.
+            </p>
+            <h4 class="tituloTags">Tecnologias Utilizadas</h4>
+            <div class="listaTags">
+                <span class="tag html">HTML5</span>
+                <span class="tag css">CSS3</span>
+            </div>
         </div>
-        
-        <h2>Contacto</h2>
+
+        <h2 id="contacto" class="tituloMenu">Contacto</h2>
         <form>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required />
             <label for="correo">Correo:</label>
-            <input type="email" id="correo" name="correo" required>
+            <input type="email" id="correo" name="correo" required />
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
             <button type="submit">Enviar</button>
         </form>
-    </section>
-
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </section>
 </body>
+
 </html>

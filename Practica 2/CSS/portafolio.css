@@ -3,39 +3,123 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px dashed rgba(0, 0, 0, 0.2);
+    outline: 1px dashed rgba(31, 30, 30, 0.349);
     /* Activa el contorno para revisar el espacio real*/
 }
 body{
     font-family: 'Oswald', sans-serif;
-    background-color: #261A14;
-    color: #EDEAE1;
+    background-color: #EDEAE1;
+    color: #261A14;
 }
 /* ---- HEADER GLOBAL ---- */
 header{
     position: fixed;    /* Simpre visible, aunque se haga scroll */
     width: 100%;        /* Ocupa todo el ancho de la pantalla */
+    height: 70px;       /* El Alto que ocupa el header */
     background-color: #4D3D35;
     color: #009ACD;
     display: flex;      /* Activa flexbox para alinear los elementos */
+    justify-content: space-between;     /* Separa la zona del logo y el menu */
     z-index: 1000;      /* Mantien el header por encima de todo */
+
 }
-/* ---- Avatar + Nombre ---- */
-.areaAvatar{
-    display: flex;      /* Coloca el avatar y el nombre en fila */
+/* ---- Logo + Nombre ---- */
+.areaLogo{
+    display: flex;      /* Coloca el logo y el nombre en fila */
     align-items: center;/* Alinea verticalmente en el centro */
     gap: 10px;          /* Distacia entre el avatar y el nombre*/
+    width: 35%;         /* Tamaño que ocupa de la pantalla */
+    padding-left: 3em;/* Relleno al lado izquierdo y derecho de la linea */
 }
-.avatar{
-width: 50px;            /* Tamaño del avatar (ancho) */
-height: 50px;           /* Tamaño del avatar (alto) */
-border-radius: 50%;            /* Redondear los bordes para conseguir una foto en forma de circulo */
+/* ---- Logo ---- */
+.logo{
+width: 50px;            /* Tamaño del logo (ancho) */
+height: 50px;           /* Tamaño del logo (alto) */
+border-radius: 50%;     /* Redondear los bordes para conseguir una foto en forma de circulo */
 object-fit: cover;      /* Ajusta la imagen sin deformarla */
 }
 
 /* ---- Menu ---- */
-nav{
-    text-align: right;
+.menu{
+    display: flex;      /* Coloca  el menu en fila */
+    gap: 30px;          /* Distancia entre los enlaces del menu */
+    align-items: center;/* Alinea verticalmente en el centro */
+    justify-content: right;    /* Alinea en el centro los elementos hijos  */
+    width: 65%;         /* Tamaño que ocupa de la pantalla */
+    padding-right: 3em;/* Relleno al lado izquierdo y derecho de la linea */
+}
+
+.menu a, .areaLogo a{
     color: #009ACD;
-    text-decoration: none;
+    text-decoration: none;      /* Elimina el subrayado por defecto que tiene */
+    transition: color 0.3s ease;/* Animacion suave del color al pasar el ratón */
+}
+.menu a:hover, .areaLogo a:hover{
+    color: #FEDF00; /* Cambia el color al pasar el raton por encima del enlace */
+}
+
+/* ---- SECTION ---- */
+section{
+    padding-top: 80px;  /* Espacio que hay que dejar para el encabezado no tape el titulo */
+    
+}
+.presentacion{
+    margin: 10em 20%;   /* Margen del texto de presentacion, ocupa el  */
+    text-align: center; /* Alinea el texto en el centro */
+    font-size: x-large;
+}
+.presentacion h3{
+    color: #D52D26;
+}
+.tituloMenu{
+    padding-top: 80px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.proyectos{
+    margin: 50px 20%;   /*Separacion entre proyectos de 40px y el contenido ocupa el 60% de la pantalla*/
+    line-height: 2.5;
+}
+.tituloProyecto{
+    font-size: 1.2em;
+    color: #4D3D35;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.descripcion{
+    line-height: 1.5;   /* Determina el ancho que hay entre las lineas de texto */
+}
+
+/* ---- ETIQUETAS ---- */
+.tituloTags{
+    font-size: 1.2em;
+    color: #4D3D35;
+}
+.listaTags{
+    display: flex;      /* Los coloca en fila */
+    gap: 10px;          /* Espacio ente etiquetas */
+}
+.tag{
+    padding: 1px 10px;  /* Tamaño interno del chip */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block;  /* Mantiene forma rectangular */
+    font-weight: bold;
+    font-size: small;
+    letter-spacing: 0.5px;  /* Aumenta el espacios entre las letras */
+}
+.html{
+    background-color: #e54c21;   /*Color de fondo para el HTML5*/
+}
+.css{
+    background-color: #264de4;   /*Color de fondo para el CSS3*/
+}
+
+/* ---- FORMULARIO ---- */
+form{
+    margin: 40px 20%;   /*Separacion entre proyectos de 40px y el contenido ocupa el 60% de la pantalla*/
+    line-height: 1.5;
+}
+label{
+    display: block;
 }
