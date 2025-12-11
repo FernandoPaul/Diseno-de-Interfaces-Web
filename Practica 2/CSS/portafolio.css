@@ -3,9 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px dashed rgba(31, 30, 30, 0.349);
-    /* Activa el contorno para revisar el espacio real*/
+    /*outline: 1px dashed rgba(31, 30, 30, 0.349);
+     Activa el contorno para revisar el espacio real*/
 }
+/* ---- ESTILOS GLOBALES ---- */
 body{
     font-family: 'Oswald', sans-serif;
     background-color: #EDEAE1;
@@ -29,24 +30,24 @@ header{
     align-items: center;/* Alinea verticalmente en el centro */
     gap: 10px;          /* Distacia entre el avatar y el nombre*/
     width: 35%;         /* Tamaño que ocupa de la pantalla */
-    padding-left: 3em;/* Relleno al lado izquierdo y derecho de la linea */
+    padding-left: 3em;  /* Relleno al lado izquierdo de la linea */
 }
 /* ---- Logo ---- */
 .logo{
-width: 50px;            /* Tamaño del logo (ancho) */
-height: 50px;           /* Tamaño del logo (alto) */
-border-radius: 50%;     /* Redondear los bordes para conseguir una foto en forma de circulo */
-object-fit: cover;      /* Ajusta la imagen sin deformarla */
+    width: 50px;        /* Tamaño del logo (ancho) */
+    height: 50px;       /* Tamaño del logo (alto) */
+    border-radius: 50%; /* Redondear los bordes para conseguir una foto en forma de circulo */
+    object-fit: cover;  /* Ajusta la imagen sin deformarla */
 }
 
 /* ---- Menu ---- */
 .menu{
-    display: flex;      /* Coloca  el menu en fila */
-    gap: 30px;          /* Distancia entre los enlaces del menu */
-    align-items: center;/* Alinea verticalmente en el centro */
-    justify-content: right;    /* Alinea en el centro los elementos hijos  */
-    width: 65%;         /* Tamaño que ocupa de la pantalla */
-    padding-right: 3em;/* Relleno al lado izquierdo y derecho de la linea */
+    display: flex;              /* Coloca  el menu en fila */
+    gap: 30px;                  /* Distancia entre los enlaces del menu */
+    align-items: center;        /* Alinea verticalmente en el centro */
+    justify-content: right;     /* Alinea en el centro los elementos hijos */
+    width: 65%;                 /* Tamaño que ocupa de la pantalla */
+    padding-right: 3em;         /* Relleno al lado derecho de la linea */
 }
 
 .menu a, .areaLogo a{
@@ -66,26 +67,28 @@ section{
 .presentacion{
     margin: 10em 20%;   /* Margen del texto de presentacion, ocupa el  */
     text-align: center; /* Alinea el texto en el centro */
-    font-size: x-large;
+    font-size: x-large; /* Redimensiona el tamaño de la fuente */
 }
 .presentacion h3{
     color: #D52D26;
 }
+/* ---- PROYECTOS ---- */
 .tituloMenu{
-    padding-top: 80px;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    text-align: center;
+    padding-top: 80px;  /* Espacio que hay que dejar para el encabezado no tape al titulo */
+    font-size: 2.5em;   /* Redimensiona el tamaño de la fuente */
+    text-transform: uppercase;  /* Convierte todo el texto en matúsculas */
+    text-align: center; /* Centra el texto */
+    margin-inline: 20%; /* Margen al lado izquierdo y derecho */
 }
 .proyectos{
-    margin: 50px 20%;   /*Separacion entre proyectos de 40px y el contenido ocupa el 60% de la pantalla*/
-    line-height: 2.5;
+    margin: 50px 20%;   /* Separacion entre proyectos de 40px y el contenido ocupa el 60% de la pantalla */
+    line-height: 2.5;   /* Aumenta el espacio entre las lineas de texto */
 }
 .tituloProyecto{
-    font-size: 1.2em;
+    font-size: 1.2em;           /* Redimensiona el tamaño de la fuente */
     color: #4D3D35;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: bold;          /* Pone el texto en negrita  */
+    text-transform: uppercase;  /* Convierte el texto en mayúsculas */
 }
 .descripcion{
     line-height: 1.5;   /* Determina el ancho que hay entre las lineas de texto */
@@ -93,19 +96,19 @@ section{
 
 /* ---- ETIQUETAS ---- */
 .tituloTags{
-    font-size: 1.2em;
+    font-size: 1.2em;   /* Redimensiona el tamaño de la fuente */
     color: #4D3D35;
 }
 .listaTags{
-    display: flex;      /* Los coloca en fila */
-    gap: 10px;          /* Espacio ente etiquetas */
+    display: flex;      /* Los coloca en fila horizontalmente */
+    gap: 5px;           /* Espacio ente etiquetas */
 }
 .tag{
-    padding: 1px 10px;  /* Tamaño interno del chip */
-    border-radius: 5px; /* Bordes redondeados */
+    padding: 1px 10px;      /* Tamaño interno del tag */
+    border-radius: 5px;     /* Bordes redondeados */
     display: inline-block;  /* Mantiene forma rectangular */
-    font-weight: bold;
-    font-size: small;
+    font-weight: bold;      /* Pone el texto en negrita */
+    font-size: small;       /* Redimensiona el tamaño de la fuente */
     letter-spacing: 0.5px;  /* Aumenta el espacios entre las letras */
 }
 .html{
@@ -117,9 +120,31 @@ section{
 
 /* ---- FORMULARIO ---- */
 form{
-    margin: 40px 20%;   /*Separacion entre proyectos de 40px y el contenido ocupa el 60% de la pantalla*/
-    line-height: 1.5;
+    margin: 40px 20%;   /* Separacion entre proyectos de 40px y el contenido ocupa el 60% de la pantalla */
+    line-height: 1.5;   /* Determina el ancho que hay entre las lineas de texto */
+    text-align: center; /*  */
 }
-label{
-    display: block;
+
+input[type="text"], input[type="email"], textarea{
+    width: 50%;         /* Ancho que ocuapa de la pantalla */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 5px 0;      /* Margen superior e inferior */
+    padding: 5px;       /* Relleno interno */
+    line-height: 1.5;   /* Determina el ancho que hay entre las lineas de texto */
+    resize: none;       /* Deshabilita el redimensionado del textarea */
+}
+button{
+    display: block;                 /* Convierte el botton en un elemento de bloque */
+    margin: auto;                   /* Centra el elemento en bloque dentro de su contenedor (form) */
+    border-radius: 5px;             /* Bordes redondeados */
+    padding: 5px 10px;              /* Relleno interno */
+    line-height: 1.5;               /* Determina el ancho que hay entre las lineas de texto */
+    text-transform: uppercase;      /* Convierte el texto en mayúsculas */
+    color: #009ACD;
+    background-color: #4D3D35;
+    font-weight: bold;              /* Pone el texto en negrita */
+    transition: color 0.3s ease;    /* Animacion suave del color al pasar el ratón */
+}
+button:hover{
+    color: #FEDF00;     /* Cambio de color al pasar el raton por encima del botón  */
 }
