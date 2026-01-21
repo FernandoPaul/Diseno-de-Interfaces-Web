@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase practica</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f6fb;
+            color: #1f2937;
+        }
+
+        h1 {
+            margin: 20px;
+            font-size: 32px;
+        }
+
+        p {
+            margin: 0 20px 20px 20px;
+            line-height: 1.5;
+        }
+
+        .topbar {
+            background-color: #1f2937;
+            color: #f4f6fb;
+            padding: 16px 20px;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        #slogan {
+            margin: 60px 0 0 0;
+            opacity: 0.50;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(35, 90, 163);
+            padding: 8px 10px;
+            border-radius: 8px;
+        }
+
+        .menu a:hover {
+            background-color: rgb(86, 133, 190);
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 16px;
+            margin-top: 14px;
+        }
+        .card{
+            background-color: white;
+            border-radius: 12px;
+            padding: 10px;
+        }
+        .destacado{
+            border: 2px solid black;
+        }
+        .price{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px 0 10px;
+            text-align: right;
+            
+        }
+        .features{
+            padding-left: 10px;
+            margin: 0 0 15px 0;
+        }
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            background-color: rgb(101, 159, 224);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            background-color: rgb(156, 194, 245);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <h1 class="logo">Relojify</h1>
+        <p id="slogan">Tu tienda online de relojes creados en Euroformac</p>
+    </header>
+    <!-- MENU -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#catalogo">Ofertas</a></li>
+            <li><a href="#catalogo">Carrito</a></li>
+            <li><a href="#catalogo">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- CATALOGO -->
+    <main class="container">
+        <section id="catalogo">
+            <h2>Catálogo</h2>
+            <p>Explora los relojes que tiene Euroformac</p>
+            <div class="grid">
+                <article class="card">
+                    <h3>Reloj 1</h3>
+                    <p class="price">79,90</p>
+                    <ul class="features">
+                        <li>Reloj nuevo</li>
+                        <li>Reloj bonito</li>
+                        <li>Reloj barato</li>
+                    </ul>
+                    <a class="btn" href="#carrito">Añadir</a>
+                </article>
+                <article class="card destacado">
+                    <h3>Reloj 2</h3>
+                    <p class="price">89,90</p>
+                    <ul class="features">
+                        <li>Reloj nuevo</li>
+                        <li>Reloj bonito</li>
+                        <li>Reloj barato</li>
+                    </ul>
+                    <a class="btn" href="#carrito">Añadir</a>
+                </article>
+                <article class="card">
+                    <h3>Reloj 3</h3>
+                    <p class="price">99,90</p>
+                    <ul class="features">
+                        <li>Reloj nuevo</li>
+                        <li>Reloj bonito</li>
+                        <li>Reloj barato</li>
+                    </ul>
+                    <a class="btn" href="#carrito">Añadir</a>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
