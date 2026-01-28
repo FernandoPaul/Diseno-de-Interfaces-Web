@@ -101,6 +101,81 @@
         .btn:hover{
             background-color: rgb(156, 194, 245);
         }
+        .section{
+            margin-top: 25px;
+        }
+        .tabla{
+            width: 100%;
+            border-collapse: collapse; /* ajustar la tabla */
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px  rgb(45, 105, 184);
+        }
+        .tabla th, .tabla td{
+            padding: 10px 15px;
+            border-bottom: 1px solid rgb(45, 105, 184);
+            text-align: center;
+        }
+        /* Aplicar estilo a la parte del encabezado de la tabla*/
+        .tabla thead th{
+            background-color: rgb(123, 150, 207);
+            color: whitesmoke;
+        }
+        /* Aplicar estilo al cuerpo de la tabla*/
+        .tabla tbody tr:nth-child(even){
+            background-color: rgb(227, 242, 253);
+        }
+        .doscol{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .box{
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0px 2px 10px black;
+        }
+        .cart{
+            list-style: none;
+            padding: 0px;
+            margin: 10px 0px;
+        }
+        .cart li{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            border-bottom: 1px solid black;
+        }
+        .total{
+            text-align: right;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .form label{
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .btn2{
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+
+        }
+
+
+        /* --- CSS RESPONSIVO --- */
+        @media (max-width: 800px){
+            .grid{
+                grid-template-columns: 1fr;
+            }
+            .doscol{
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -154,6 +229,74 @@
                     </ul>
                     <a class="btn" href="#carrito">Añadir</a>
                 </article>
+            </div>
+        </section>
+        <section id="ofertas" class="section">
+                <h2>Ofertas</h2>
+                <p>Empiezan las rebajas en Euroformac</p>
+                <table class="tabla"> 
+                    <!-- Se crea un cabecero de la tabla -->
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Precio Anterior</th>
+                            <th>Precio Actual</th>
+                            <th>Disponibe</th>
+                        </tr>
+                    </thead>
+                    <!-- El cuerpo de la tabla -->
+                    <tbody>
+                        <tr>
+                            <td>Reloj</td>
+                            <td>79,90</td>
+                            <td>69,90</td>
+                            <td>En Stock</td>
+                        </tr>
+                        <tr>
+                            <td>Reloj</td>
+                            <td>89,90</td>
+                            <td>79,90</td>
+                            <td>En Stock</td>
+                        </tr>
+                        <tr>
+                            <td>Reloj</td>
+                            <td>99,90</td>
+                            <td>89,90</td>
+                            <td>Ultimas unidades</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+        <section id="carrito" class="section">
+            <h2>Carrito</h2>
+            <p>Este es tu carrito básico</p>
+
+            <div class="doscol">
+                <div class="box">
+                    <h3>Tu carrito</h3>
+                    <ul class="cart">
+                        <li><span>Reloj 1 </span><strong>79,90</strong></li>
+                        <li><span>Reloj 2 </span><strong>89,90</strong></li>
+                    </ul>
+                    <p class="total">TOTAL: <strong>170 euros</strong></p>
+                    <a class="btn" href="#contacto">Finalizar compra</a>
+                </div>
+                <div class="box" id="contacto">
+                    <h3>Contacto</h3>
+                    <p>Deja tus datos</p>
+                    <form action="" class="form">
+                        <label for="nombre">Nombre:
+                            <input type="text" placeholder="Alfonso" required>
+                        </label>
+                        <label for="email">Email:
+                            <input type="email" placeholder="Alfonso@gmail.com" required>
+                        </label>
+                        <label for="comentario">Comentario:
+                            <input type="text" placeholder="Deja tu comentario" required>
+                        </label>
+                        <button class="btn btn2" type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
