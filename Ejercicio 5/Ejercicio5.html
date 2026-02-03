@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="layout" aria-label="Reserva de cita">
+            <div class="content">
+                <div class="badge" role="note">+1200 pacientes satisfechos</div>
+                <h1>Reserva tu cita en 1 minuto</h1>
+                <p class="lead">
+                    Tratamiento personalizado, con los mejores profesionales del sector.
+                    Elige el día y la hora y te lo confirmamos.
+                </p>
+                <ul class="benefits">
+                    <li><span class="dot" aria-hidden="true"></span>Ateción especial</li>
+                    <li><span class="dot" aria-hidden="true"></span>Servicio 24 horas</li>
+                    <li><span class="dot" aria-hidden="true"></span>Profesionales cualificados</li>
+                </ul>
+
+            </div>
+            <div class="card">
+                <h2>Solicitar Cita</h2>
+                <p class="subtitle">Rellena tus datos y nos ponemos en contacto.</p>
+                <form action="form" action="#" method="post">
+                    <label for="">
+                        Nombre y apellidos
+                        <input type="text" name="name" id="" placeholder="Alfonso Ciudad" required>
+                    </label>
+                    <label for="">
+                        Teléfono
+                        <input type="text" name="telefono" id="" placeholder="61245678" required>
+                    </label>
+                    <label for="">
+                        Servicio
+                        <select name="service" id="" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option>Fisioterapia deportiva</option>
+                            <option>Fisioterapia readaptación</option>
+                            <option>Fisioterapia lumbar</option>
+                        </select>
+                    </label>
+                    <label for="">
+                        Comentario
+                        <textarea name="notes" id="" rows="4" placeholder="Cuentame de forma breve tu caso"></textarea>
+                    </label>
+                    <button class="btn" type="submit">Pedir cita</button>
+                    <p class="privacity">Al enviar aceptas la política de privacidad</p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
