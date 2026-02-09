@@ -1,0 +1,49 @@
+*{ 
+    font-family: Arial, Helvetica, sans-serif; /* Fuente por defecto para la página */
+    margin: 0; /* Elimina márgenes por defecto de todos los elementos */
+    padding: 0; /* Elimina padding por defecto de todos los elementos */
+}
+body{ 
+    background-color: #f2f2f2; /* Color de fondo de la página */
+    color: #333; /* Color de texto principal */
+}
+
+header{ 
+    background-color: #333; 
+    color: white;
+    text-align: center;     /* Centra el contenido de la cabecera */
+    padding: 15px;          /* Espacio interno */
+}
+
+.contenedor{
+    max-width: 800px;       /* Ancho máximo del contenedor */
+    margin: 40px auto;      /* Márgenes verticales y centrado horizontal */
+    padding: 20px;          /* Espacio interno del contenedor */
+}
+.video-section{ 
+    background-color: white; 
+    padding: 20px;          /* Espacio interior */
+    border-radius: 10px;    /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+    text-align: center;     /* Centra el contenido dentro de la sección */
+} 
+
+.video-section h2{ 
+    padding-bottom: 10px; /* Espacio inferior del título */
+} 
+
+.video-player{ 
+    max-width: 100%;        /* Limita el ancho del video al contenedor */
+    border-radius: 10px;    /* Bordes redondeados para el video */
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.2); /* Sombra más marcada para el video */
+} 
+/* Efecto cuando el cursor pasa sobre el video */
+.video-player:hover{ 
+    box-shadow: 0 12px 25px rgb(0, 0, 0, 0.3); /* Sombra incrementada al pasar el cursor */
+    cursor: pointer;        /* Cambia el cursor indicando que es interactivo */
+}
+.video-note{ 
+    margin-top: 10px;   /* Separación superior con respecto al video */
+    font-size: 0.9rem;  /* Tamaño de letra ligeramente reducido */
+    color: #666;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/P3_estilos.css">
+    <title>Integración de Video Optimizado para Web</title>
+</head>
+<body>
+    <header>
+        <h1>Integración de Video Optimizado para Web</h1>
+    </header>
+    <main class="contenedor">
+        <section class="video-section">
+            <h2>Video Optimizado (MP4)</h2>
+            <video class="video-player" controls preload="metadata" poster="IMG/Metropolis.JPEG" width="500" height="auto">
+                <!-- Controls: Muestra reproducir, pausar y volumen
+                    Preload: Carga solo información básica al inicio 
+                    poster: Imagen que se muestra antes de reproducir el video -->
+                <source src="Video_Optimizado/Video_optimizado.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video HTML5
+            </video>
+            <p class="video-note">
+                Video optimizado y convertido a formato MP4 para su correcta visualización en navegadores web.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
