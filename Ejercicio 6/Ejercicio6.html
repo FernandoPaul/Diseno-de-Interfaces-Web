@@ -13,11 +13,11 @@
         <div class="container header-inner">
             <h1 class="brand"><a href="#">SportZone</a></h1>
             <form action="" class="search" role="search" aria-label="Buscardor de productos">
-                <label class="se-only" for="q">Buscar</label>
+                <label class="sr-only" for="q">Buscar</label>
                 <input type="search" name="" id="q" placeholder="Buscar productos">
                 <button type="submit">Buscar</button>
             </form>
-            <button class="btn brn-primary" type="button" id="openModal">Promo</button>
+            <button class="btn btn-primary" type="button" id="openModal">Promo</button>
         </div>
     </header>
     <nav class="site-nav" aria-label="Navegación Principal">
@@ -30,6 +30,8 @@
     </nav>
     <div class="container page-grid">
         <aside class="sidebar" aria-label="Filtros">
+            <h2>Filtros</h2>
+
             <div class="filters sticky">
                 <fieldset>
                     <legend>Deporte</legend>
@@ -51,11 +53,68 @@
                 <p>Ropa técnica, de deporte y al mejor precio</p>
                 <a class="btn btn-primary" href="#productos">Ver productos</a>
             </section>
-            <section id="prodcutos" class="productos_section">
+            <section id="productos" class="productos_section">
                 <header class="section-head">
                     <h2>Destacados</h2>
                     <p class="muted">Galeria con Flexbox (cards responsivas)</p>
                 </header>
+
+                <div class="product-gallery">
+                    <article class="product-card">
+                        <img src="IMG/ropa.png" alt="Imagen de ropa" srcset="">
+                        <div class="product-body">
+                            <h3>ProRun X</h3>
+                            <p class="muted">Zapatillas de Running</p>
+                            <!-- Floats: etiquetas -->
+                            <div class="tags-floats">
+                                <span class="tag">Running</span>
+                                <span class="tag">Nuevo</span>
+                                <span class="tag">Ligero</span>
+                            </div>
+
+                            <div class="product-foot">
+                                <strong>89,95€</strong>
+                                <button class="btn" type="button">Añadir</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="IMG/ropa.png" alt="Imagen de ropa" srcset="">
+                        <div class="product-body">
+                            <h3>ProRun Y</h3>
+                            <p class="muted">Zapatillas de Running</p>
+                            <!-- Floats: etiquetas -->
+                            <div class="tags-floats">
+                                <span class="tag">Running</span>
+                                <span class="tag">Nuevo</span>
+                                <span class="tag">Ligero</span>
+                            </div>
+
+                            <div class="product-foot">
+                                <strong>99,95€</strong>
+                                <button class="btn" type="button">Añadir</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="IMG/ropa.png" alt="Imagen de ropa" srcset="">
+                        <div class="product-body">
+                            <h3>ProRun Z</h3>
+                            <p class="muted">Zapatillas de Running</p>
+                            <!-- Floats: etiquetas -->
+                            <div class="tags-floats">
+                                <span class="tag">Running</span>
+                                <span class="tag">Nuevo</span>
+                                <span class="tag">Ligero</span>
+                            </div>
+
+                            <div class="product-foot">
+                                <strong>109,95€</strong>
+                                <button class="btn" type="button">Añadir</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
     </div>
