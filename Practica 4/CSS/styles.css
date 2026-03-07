@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Establece fuente sans-serif para todo el documento */
+    box-sizing: border-box ; /* Incluye padding y border en el ancho total del elemento */
+}
+/* Estilos para el contenedor principal */
+.contenedor{ 
+    width: 100%; /* Ancho completo de la pantalla */
+    min-height: 100vh; /* Altura mínima de la ventana completa */
+    background-color: #555; /* Color de fondo gris oscuro */
+    padding: 10px; /* Espaciado interno de 10px */
+}
+/* Estilos para la aplicación principal */
+.app{ 
+    width: 100%;                /* Ancho completo del contenedor */
+    max-width: 540px;           /* Ancho máximo de 540px para centrar */
+    background: #FFF;
+    margin: 100px auto 20px;    /* Márgenes superior, automático lateral, inferior */
+    padding: 40px 30px 70px;    /* Padding superior, lateral, inferior */
+    border-radius: 10px;        /* Bordes redondeados */
+}
+/* Estilos para el título h1 dentro de .app */
+.app h1{ 
+    color: #45abff;           
+    display: flex;              /* Usa flexbox para alineación */
+    align-items: center;        /* Centra verticalmente */
+    justify-content: center;    /* Centra horizontalmente */
+    margin-bottom: 20px;        /* Margen inferior */
+}
+/* Estilos para el formulario de entrada */
+form{ 
+    display: flex;
+    align-items: center;                /* Centra verticalmente */
+    justify-content:  space-between;    /* Espacia elementos a los extremos */
+    background: #edeef0;
+    border-radius: 30px; 
+    padding-left: 10px;                 /* Padding izquierdo */
+    margin-bottom: 25px;                /* Margen inferior */
+}
+/* Estilos para el campo de entrada */
+input{ 
+    flex: 1;                        /* Ocupa el espacio restante */
+    border: none;
+    outline: none;                  /* Sin contorno al enfocar */
+    background-color: #edeef0; 
+    padding: 10px;                  /* Padding interno */
+    font-weight: 14px;    
+}
+/* Estilos para el botón */
+button{ 
+    border: none;       /* Sin borde */
+    outline: none;      /* Sin contorno */
+    padding: 16px 30px; /* Padding vertical y horizontal */
+    background: #45abff;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;    /* Cursor de puntero */
+    border-radius: 20px;/* Bordes redondeados */
+}
+/* Estilos al pasar el mouse sobre el botón */
+button:hover{ 
+    background: #3b79ac;
+    transition: all 0.3s ease; /* Suaviza la transición */
+}
+/* Estilos para elementos de lista */
+ul li{ 
+    list-style: none;   /* Sin viñetas */
+    font-size: 17px; 
+    padding: 10px 8px;  /* Padding vertical y horizontal */
+    user-select: none;  /* No permite selección de texto */
+    cursor: pointer;    /* Cursor de puntero */
+    position: relative;
+}
+ul li label{
+    margin-left: 10px; /* Espacio entre el checkbox y el texto */
+    cursor: pointer;
+}
+/* Estilos para el span dentro de li (botón de eliminar) */
+ul li span{ 
+    position: absolute; /* Posicionamiento absoluto */
+    right: 0;           /* Alineado a la derecha */
+    top: 5px;           /* Posición desde arriba */
+    width: 40px;
+    height: 40px; 
+    font-size: 22px;    
+    color: black; 
+    line-height: 40px;  /* Altura de línea */
+    text-align: center; /* Centrado horizontal */
+}
+/* Estilos al pasar mouse sobre el span */
+ul li span:hover{ 
+    background:#edeef0; /* Fondo gris claro */
+}
+/* Estilos para tareas completadas */
+.completada{ 
+    text-decoration: line-through; /* Texto tachado */
+    color:#777;
+    opacity:0.7; /* Se vuelve más tenue */
+    transform:scale(0.98); /* Ligero efecto de reducción */
+    transition:all 0.3s ease; /* Animación suave */
+}
+/* Animación del checkbox */
+input[type="checkbox"]{
+    transform:scale(1.2);
+    cursor:pointer;
+}
+
+/* Efecto cuando se marca */
+input[type="checkbox"]:checked{
+    accent-color:#45abff; /* Color moderno del checkbox */
+}
+
+/* CONTENEDOR DEL PROGRESO */
+.progress-container{
+    margin-bottom:20px; /* Espacio debajo del progreso */
+    text-align:center; /* Centra el texto */
+}
+
+/* BARRA DE FONDO */
+.progress-bar{
+    width:100%; /* Ocupa todo el ancho */
+    height:12px; /* Altura de la barra */
+    background:#ddd; /* Color gris claro */
+    border-radius:10px; /* Bordes redondeados */
+    overflow:hidden; /* Evita que la barra azul se salga */
+}
+
+/* BARRA DE PROGRESO */
+.progress{
+    width:0%; /* Empieza en 0 */
+    height:100%; /* Misma altura que el contenedor */
+    background:#45abff; /* Azul de tu diseño */
+    transition:width 0.4s ease; /* Animación suave al cambiar */
+}
+
+/* TEXTO DEL PROGRESO */
+#progressText{
+    margin-top:8px;
+    font-size:14px;
+    color:#555;
+}

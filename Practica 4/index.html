@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Seguimiento de habitos</title>
+</head>
+<body>
+    <section class="contenedor">
+        <div class="app">
+            <h1>Seguimiento de Hábitos</h1>
+            <!-- FORMULARIO PARA CREAR HÁBITOS -->
+            <form id="habitForm">
+                <input type="text" id="habitInput" placeholder="Escribe un nuevo hábito" required>
+                <button type="submit">Añadir Hábitos</button>
+            </form>
+            <!-- LSITA DE HÁBITOS -->
+            <ul id="habitList" class="habitList"></ul>
+            <!-- RESUMEN DE PROGRESO -->
+            <h3>Progreso Diario</h3>
+            <!-- CONTENEDOR DEL PROGRESO -->
+            <div class="progress-container">
+                <!-- Texto del porcentaje -->
+                <p id="progressText">0% completado</p>
+                <!-- Barra gris de fondo -->
+                <div class="progress-bar">
+                    <!-- Barra azul que crecerá con JavaScript -->
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENLACE AL ARCHIVO JAVASCRIPT -->
+    <script src="JS/script.js"></script>
+</body>
+</html>
